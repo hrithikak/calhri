@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+<form name="display">
+    
+    <div class="clc">
+        <h3>
+            CALCULATOR</h3>
+        <input type="text" placeholder="0" name="screen" class="placeholder" id="box">
+               <br>
+       <h4></h4>
+            <input type="button"  value="AC"onclick="display.screen.value=''" >
+            <input type="button" value="%"  onclick="display.screen.value+='%'" >
+            <input  type="button" value="🔙" onclick="display.screen.value=removeLast()">
+            <input  type="button" value="÷" onclick="display.screen.value+='/'">
+       
+               <br>
+        <input type="button" value="7" onclick="display.screen.value+='7'">
+        <input type="button" value="8" onclick="display.screen.value+='8'">
+        <input type="button" value="9" onclick="display.screen.value+='9'">
+        <input type="button" value="*" onclick="display.screen.value+='*'">
+                <br>
+        <input type="button" value="4" onclick="display.screen.value+='4'">
+        <input type="button" value="5" onclick="display.screen.value+='5'">
+        <input type="button" value="6" onclick="display.screen.value+='6'">
+        <input type="button" value="-" onclick="display.screen.value+='-'">
+                <br>
+        <input type="button" value="1" onclick="display.screen.value+='1'">
+        <input type="button" value="2" onclick="display.screen.value+='2'">
+        <input type="button" value="3" onclick="display.screen.value+='3'">
+        <input type="button" value="+" onclick="display.screen.value+='+'">
+                <br>
+        <input type="button"  value="00" onclick="display.screen.value+='00'" >
+        <input type="button" value="0" onclick="display.screen.value+='0'">
+        <input type="button" value="." onclick="display.screen.value+='.'">
+        <input  class="i" type="button" value="=" onclick="display.screen.value=eval(display.screen.value)">
+    
+    
+    </div>
+    
+    
+</form>
+    </div>
+</body>
+<script src="./main.js">
+    const audio=new Audio();
+    audio.src = "./click.mp3"
+
+</script>
+</html>
